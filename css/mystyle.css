@@ -1,0 +1,13 @@
+body{
+    background-color: darkgrey;
+}
+svg:hover .CatHead{
+   fill: blue; /* Farger bildet når du holder musen over */
+   transform: scale(.9); /* Gjør at bildet blir mindre når du holder musen over */
+}
+.CatHead{
+    transition: all .5s; 
+    /* transition gjør at du kan velge hvordan effektene skal fungere
+    transform alene gjør at bildet scaler(fra 1 til .9) saktere over .5 sekunder(ser smooth ut)
+    all gjør at alle effektene hender over .5 sekunder. */
+}
