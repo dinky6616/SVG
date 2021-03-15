@@ -1,0 +1,56 @@
+body{
+    background-color: burlywood;
+}
+.Blue-Eyes .EyeColor{
+    fill: rgb(0, 81, 255);
+
+}
+.sad .mouth {
+    transform: rotate(180deg) scale(.8);
+    transform-origin: 244px 299px;
+    /*Munnen flytter seg, det er fordi den flytter seg i forhold til sin egen senter posisjon. Med SVG er figurens munn i forhold til toppen på venstre side av selve bildet */
+}
+/* keyframes er selve animasjonen */
+@keyframes moveEyes {
+    20% { /* Starten av animasjonen */
+        transform: translate(-18px, -20px);
+
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    65% {
+        transform: translate(18px, -20px);
+    }
+
+}
+.jiggle .innereye {
+    animation: moveEyes 5s infinite;
+}
+
+@keyframes LeftWhiskers{
+    20% {transform: rotate(5deg);}
+    60% {transform: rotate(-5deg);}
+}
+.jiggle .whiskersleft {
+    animation: LeftWhiskers 3s infinite;
+    transform-origin: 212px 285px;
+}
+@keyframes RightWhiskers{
+    30% {transform: rotate(5deg);}
+    90% {transform: rotate(-5deg);}
+}
+.jiggle .whiskersright {
+    animation: RightWhiskers 3s infinite;
+    transform-origin: 275px 293px;
+}
+.jiggle {
+    animation: move 8s infinite;
+}
+@keyframes move {
+    40% {transform: rotateY(20deg);}
+    90% {transform: rotateX(10deg);}
+}
+.svg-container {
+    perspective: 1500px;
+}
