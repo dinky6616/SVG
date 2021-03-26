@@ -1,2 +1,0 @@
-# SVG
-Første SVG forsøk
